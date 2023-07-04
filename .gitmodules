@@ -1,11 +1,11 @@
-[submodule "third_party/bgfx"]
-	path = third_party/bgfx
+[submodule "third_party/bgfx_group/bgfx"]
+	path = third_party/bgfx_group/bgfx
 	url = https://github.com/bkaradzic/bgfx
-[submodule "third_party/bimg"]
-	path = third_party/bimg
+[submodule "third_party/bgfx_group/bimg"]
+	path = third_party/bgfx_group/bimg
 	url = https://github.com/bkaradzic/bimg
-[submodule "third_party/bx"]
-	path = third_party/bx
+[submodule "third_party/bgfx_group/bx"]
+	path = third_party/bgfx_group/bx
 	url = https://github.com/bkaradzic/bx
 [submodule "third_party/glfw"]
 	path = third_party/glfw
