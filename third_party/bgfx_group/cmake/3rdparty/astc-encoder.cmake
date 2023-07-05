@@ -8,29 +8,29 @@
 # You should have received a copy of the CC0 Public Domain Dedication along with
 # this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
-if( TARGET astc-codec )
+if(TARGET astc-encoder)
 	return()
 endif()
 
 file(
 	GLOB
 	ASTC_CODEC_SOURCES
-	${BIMG_DIR}/3rdparty/astc-codec/src/decoder/*.cc
-	${BIMG_DIR}/3rdparty/astc-codec/src/decoder/*.h
+	${BIMG_DIR}/3rdparty/astc-encoder/source/*.cpp
+	${BIMG_DIR}/3rdparty/astc-encoder/source/*.h
 )
 
-add_library( astc-codec STATIC ${ASTC_CODEC_SOURCES} )
-target_include_directories( astc-codec
+add_library(astc-encoder STATIC ${ASTC_CODEC_SOURCES})
+target_include_directories(astc-encoder
 	PUBLIC
-		$<BUILD_INTERFACE:${BIMG_DIR}/3rdparty>
-		$<BUILD_INTERFACE:${BIMG_DIR}/3rdparty/astc-codec>
-		$<BUILD_INTERFACE:${BIMG_DIR}/3rdparty/astc-codec/include> )
-set_target_properties( astc-codec PROPERTIES FOLDER "bgfx/3rdparty" )
+	$<BUILD_INTERFACE:${BIMG_DIR}/3rdparty>
+	$<BUILD_INTERFACE:${BIMG_DIR}/3rdparty/astc-encoderc>
+	$<BUILD_INTERFACE:${BIMG_DIR}/3rdparty/astc-encoder/include>)
+set_target_properties(astc-encoder PROPERTIES FOLDER "bgfx/3rdparty")
 
 if( BGFX_INSTALL )
 	include(GNUInstallDirs)
 	install(
-		TARGETS astc-codec
+		TARGETS astc-encoder
 		EXPORT bgfx-config
 		ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
 endif()
