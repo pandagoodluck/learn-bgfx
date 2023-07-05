@@ -57,8 +57,13 @@ target_compile_definitions( bx PUBLIC "__STDC_FORMAT_MACROS" )
 target_compile_definitions( bx PUBLIC "__STDC_CONSTANT_MACROS" )
 
 target_compile_definitions( bx PRIVATE "$<$<CONFIG:Debug>:BX_CONFIG_DEBUG=1>" )
+
 if(BGFX_CONFIG_DEBUG)
-	target_compile_definitions( bx PRIVATE BX_CONFIG_DEBUG=1)
+	message("BGFX_CONFIG_DEBUG1 = 1")
+	target_compile_definitions( bx PRIVATE BX_CONFIG_DEBUG=1 )
+else()
+	message("BGFX_CONFIG_DEBUG1 = 0")
+	target_compile_definitions( bx PRIVATE BX_CONFIG_DEBUG=0 )
 endif()
 
 # Additional dependencies on Unix
