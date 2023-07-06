@@ -11,7 +11,7 @@
 
 
 /**
- * glfw include, glfw3native.h必须放在上述宏定义之后
+ * glfw include, glfw3native.h必须放在宏定义之后
  *
  */
 #if BX_PLATFORM_LINUX
