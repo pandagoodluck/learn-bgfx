@@ -29,9 +29,10 @@ else()
 endif()
 
 add_library( glslang STATIC EXCLUDE_FROM_ALL ${GLSLANG_SOURCES} )
-target_include_directories( glslang PUBLIC
+target_include_directories(glslang PUBLIC
 	${BGFX_DIR}/3rdparty/spirv-tools/include
 	${BGFX_DIR}/3rdparty/spirv-tools/source
+	${BGFX_DIR}/3rdparty
 	${BGFX_DIR}/3rdparty/glslang
 	${BGFX_DIR}/3rdparty/glslang/glslang/Include
 	${BGFX_DIR}/3rdparty/glslang/glslang/Public

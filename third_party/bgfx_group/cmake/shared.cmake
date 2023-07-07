@@ -20,12 +20,12 @@ configure_file( ${CMAKE_CURRENT_SOURCE_DIR}/generated/shader_spirv.cpp.in
 target_sources( bgfx-shader-spirv INTERFACE ${CMAKE_CURRENT_BINARY_DIR}/generated/shader_spirv.cpp )
 target_include_directories( bgfx-shader-spirv INTERFACE ${BGFX_DIR}/include )
 
-add_library( bgfx-bounds INTERFACE )
-configure_file( ${CMAKE_CURRENT_SOURCE_DIR}/generated/bounds.cpp.in
-                ${CMAKE_CURRENT_BINARY_DIR}/generated/bounds.cpp )
-target_sources( bgfx-bounds INTERFACE ${CMAKE_CURRENT_BINARY_DIR}/generated/bounds.cpp )
-target_include_directories( bgfx-bounds INTERFACE ${BGFX_DIR}/include )
-target_include_directories( bgfx-bounds INTERFACE ${BGFX_DIR}/examples/common )
+# add_library( bgfx-bounds INTERFACE )
+# configure_file( ${CMAKE_CURRENT_SOURCE_DIR}/generated/bounds.cpp.in
+#                 ${CMAKE_CURRENT_BINARY_DIR}/generated/bounds.cpp )
+# target_sources( bgfx-bounds INTERFACE ${CMAKE_CURRENT_BINARY_DIR}/generated/bounds.cpp )
+# target_include_directories( bgfx-bounds INTERFACE ${BGFX_DIR}/include )
+# target_include_directories( bgfx-bounds INTERFACE ${BGFX_DIR}/examples/common )
 
 # Frameworks required on OS X
 if( APPLE AND NOT IOS)
