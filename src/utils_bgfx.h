@@ -4,7 +4,10 @@
 #include <fstream>
 
 #include "common.h"
-
+/**
+ * 功能函数
+ *
+ */
 static bgfx::ShaderHandle loadShader(const char* _name) {
     char* data = new char[2048];
     std::ifstream file;

@@ -3,29 +3,6 @@
 #include "utils_glfw.h"
 #include "utils_bgfx.h"
 
-struct PosColorVertex {
-    // 顶点坐标
-    float m_x;
-    float m_y;
-    float m_z;
-    // 顶点颜色
-    uint32_t m_abgr;
-    // 顶点描述对象
-    static bgfx::VertexLayout ms_decl;
-
-    static void init() {
-        ms_decl
-            .begin()
-            .add(bgfx::Attrib::Position, 3, bgfx::AttribType::Float)
-            // When normalized is set to true, AttribType::Uint8 value in range 0-255 will be in range 0.0-1.0 in vertex shader.
-            .add(bgfx::Attrib::Color0, 4, bgfx::AttribType::Uint8, true)
-            .end();
-    };
-
-};
-bgfx::VertexLayout PosColorVertex::ms_decl;
-
-
 // vertex stream expects _abgr
 // vertex stream in they way GPU expects.
 // https://github.com/bkaradzic/bgfx/issues/1090
