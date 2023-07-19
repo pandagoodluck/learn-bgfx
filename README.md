@@ -5,7 +5,7 @@
 - https://github.com/bkaradzic/bimg
 
 ## CMAKE编译
-- 以https://github.com/widberg/bgfx.cmake.git为基础，修改支持新版本bgfx编译
+- 以https://github.com/widberg/bgfx.cmake.git 为基础，修改支持新版本bgfx编译
 
 ## Examples
 - example_01_helloworld: 熟悉bgfx初始化、销毁、打印debug信息
