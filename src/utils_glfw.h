@@ -1,5 +1,5 @@
-#ifndef GLFW_UTIL_H
-#define GLFW_UTIL_H
+#ifndef UTILS_GLFW_H
+#define UTILS_GLFW_H
 
 #include "common.h"
 
@@ -15,7 +15,7 @@ static int glfw_init(GLFWwindow **window) {
     }
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 
-    *window = glfwCreateWindow(1024, 768, "helloworld", nullptr, nullptr);
+    *window = glfwCreateWindow(1024, 768, "example", nullptr, nullptr);
     if (!window)
         return 1;
     // glfwSetKeyCallback(*window, glfw_keyCallback);

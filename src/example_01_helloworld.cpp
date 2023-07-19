@@ -1,8 +1,7 @@
 #include <iostream>
-#include "common.h"
-#include "glfw_utils.h"
+#include "utils_glfw.h"
 
- // 参考 jpcy https://github.com/jpcy/bgfx-minimal-example.git
+// 参考 jpcy https://github.com/jpcy/bgfx-minimal-example.git
 int main(int argc, char **argv) {
     // 初始化GLFW window
     GLFWwindow *window;

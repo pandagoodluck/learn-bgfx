@@ -70,8 +70,11 @@ include_directories(${THIRD_PARTY}/bgfx_group/bimg/include)
 include_directories(${THIRD_PARTY}/bgfx_group/bx/include)
 include_directories(${THIRD_PARTY}/glfw/include)
 
+
 set(MAIN_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/example_01_helloworld.cpp)
+add_executable(example_01_helloworld ${MAIN_SRC})
+target_link_libraries(example_01_helloworld bgfx bx bimg glfw ${THIRDPARTY_LIBRARIES})
 
-add_executable(main ${MAIN_SRC})
-target_link_libraries(main bgfx bx bimg glfw ${THIRDPARTY_LIBRARIES})
-
+set(MAIN_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/example_02_triangle.cpp)
+add_executable(example_02_triangle ${MAIN_SRC})
+target_link_libraries(example_02_triangle bgfx bx bimg glfw ${THIRDPARTY_LIBRARIES})
