@@ -32,7 +32,9 @@
 enum class RenderView : uint16_t {
     MAIN = 0,
     NO_CLEAR = 1,
-    SWAP = 2
+    SWAP = 2,
+    VIEW_1 = 3,
+    VIEW_2 = 4,
 };
 struct PosColorVertex {
     // 顶点坐标
