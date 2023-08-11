@@ -11,6 +11,7 @@
 - example_01_helloworld: 熟悉bgfx初始化、销毁、打印debug信息
 - example_02_triangle: 用bgfx绘制三角形，包含初步的shader使用
 - example_03_transform: 在example_02_triangle基础上，添加绘制的矩阵参数学习
+- example_04_multiviews: bgfx多个view渲染，包含位置、顺序等尝试
 
 ## demo编译脚本
 - mac: build-macos.sh
